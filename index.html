@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Parte 1</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicios de Lógica</h1>
+
+        <button class="collapsible">Primaria</button>
+        <div class="content">
+            <button class="exercise-btn" onclick="showExercise('exercise1')">Ejercicio 1</button>
+            <button class="exercise-btn" onclick="showExercise('exercise2')">Ejercicio 2</button>
+            <button class="exercise-btn" onclick="showExercise('exercise3')">Ejercicio 3</button>
+        </div>
+
+        <button class="collapsible">Secundaria</button>
+        <div class="content">
+            <button class="exercise-btn" onclick="showExercise('exercise4')">Ejercicio 1</button>
+            <button class="exercise-btn" onclick="showExercise('exercise5')">Ejercicio 2</button>
+            <button class="exercise-btn" onclick="showExercise('exercise6')">Ejercicio 3</button>
+            <button class="exercise-btn" onclick="showExercise('exercise7')">Ejercicio 4</button>
+            <button class="exercise-btn" onclick="showExercise('exercise8')">Ejercicio 3</button>
+
+        </div>
+
+        <button class="collapsible">Universidad</button>
+        <div class="content">
+            <button class="exercise-btn" onclick="showExercise('exercise9')">Ejercicio 1</button>
+            <button class="exercise-btn" onclick="showExercise('exercise10')">Ejercicio 2</button>
+            <button class="exercise-btn" onclick="showExercise('exercise11')">Ejercicio 3</button>
+            <button class="exercise-btn" onclick="showExercise('exercise12')">Ejercicio 4</button>
+
+
+        </div>
+
+
+        <button class="collapsible">Sobre Nosotros</button>
+        <div class="content">
+            <div class="exercise-section">
+                <h2>Sobre Nosotros</h2>
+                <p>Esta pagina esta diseñada para estudiantes de Primaria ,Secundaria y universidad son Ejercicios facilees de comprender y resolver SUERTE TU PUEDES .</p>
+            </div>
+        </div>
+
+
+        <button class="collapsible">Contacto</button>
+        <div class="content">
+            <div class="exercise-section">
+                <h2>Contacto</h2>
+                <form>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p>Síguenos en nuestras redes sociales:</p>
+                <p>Facebook | Twitter | Instagram</p>
+            </div>
+        </div>
+
+        <div id="exercise1" class="exercise-section" style="display:none;">
+            <h2>Completar secuencias numéricas</h2>
+            <p>¿Qué número sigue en la secuencia 2, 4, 6,...?</p>
+            <button onclick="checkSequence(8, 'result1')">8</button>
+            <button onclick="checkSequence(10, 'result1')">10</button>
+            <button onclick="checkSequence(12, 'result1')">12</button>
+            <p id="result1"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise1')">Salir</button>
+        </div>
+
+        <div id="exercise2" class="exercise-section" style="display:none;">
+            <h2>Logica de comparaciones</h2>
+            <p>¿Quién es mayor, Juan de 12 años o María de 14 años?</p>
+            <button onclick="checkComparison('Juan', 'result2')">Juan</button>
+            <button onclick="checkComparison('María', 'result2')">María</button>
+            <p id="result2"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise2')">Salir</button>
+        </div>
+        
+        <div id="exercise3" class="exercise-section" style="display:none;">
+            <h2>Introducción a Condicionales</h2>
+            <p>¿Qué recipiente puede contener más líquido, un vaso de 250 ml o una botella de 1 litro?</p>
+            <button onclick="checkConditional('Vaso', 'result3')">Vaso</button>
+            <button onclick="checkConditional('Botella', 'result3')">Botella</button>
+            <p id="result3"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise3')">Salir</button>
+        </div>
+
+        <div id="exercise4" class="exercise-section" style="display:none;">
+            <h2>Ejercicios de Bucles</h2>
+            <p>¿Cuántas veces se repite el número 3 en la secuencia 3, 6, 9, ... hasta 30?</p>
+            <button onclick="checkLoop(10, 'result4')">10</button>
+            <button onclick="checkLoop(11, 'result4')">11</button>
+            <button onclick="checkLoop(12, 'result4')">12</button>
+            <p id="result4"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise4')">Salir</button>
+        </div>
+
+        <div id="exercise5" class="exercise-section" style="display:none;">
+            <h2>Sumar Números Naturales</h2>
+            <p>Ingrese un número:</p>
+            <input type="number" id="numSum">
+            <button onclick="sumNaturalNumbers()">Calcular</button>
+            <p id="result5"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise5')">Salir</button>
+        </div>
+
+        <div id="exercise6" class="exercise-section" style="display:none;">
+            <h2>Factorial de un Número</h2>
+            <p>Ingrese un número:</p>
+            <input type="number" id="numFactorial">
+            <button onclick="calculateFactorial()">Calcular</button>
+            <p id="result6"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise6')">Salir</button>
+        </div>
+
+        <div id="exercise7" class="exercise-section" style="display:none;">
+            <h2>Tabla de Multiplicar y/o Sumar</h2>
+            <p>Ingrese un número y elija una operación:</p>
+            <input type="number" id="numTable">
+            <select id="operationTable">
+                <option value="*">Multiplicar</option>
+                <option value="+">Sumar</option>
+            </select>
+            <button onclick="generateTable()">Mostrar</button>
+            <p id="result7"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise7')">Salir</button>
+        </div>
+
+        <div id="exercise8" class="exercise-section" style="display:none;">
+            <h2>Secuencia de Fibonacci</h2>
+            <p>Ingrese un número:</p>
+            <input type="number" id="numFibonacci">
+            <button onclick="generateFibonacci()">Mostrar</button>
+            <p id="result8"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise8')">Salir</button>
+        </div>
+
+        <div id="exercise9" class="exercise-section" style="display:none;">
+            <h2>Calculadora Interactiva</h2>
+            <p>Elige una operación y proporciona dos números:</p>
+            <select id="operationCalc">
+                <option value="add">Sumar</option>
+                <option value="subtract">Restar</option>
+                <option value="multiply">Multiplicar</option>
+                <option value="divide">Dividir</option>
+            </select>
+            <input type="number" id="num1Calc" placeholder="Número 1">
+            <input type="number" id="num2Calc" placeholder="Número 2">
+            <button onclick="calculate()">Calcular</button>
+            <p id="result9"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise9')">Salir</button>
+        </div>
+        <div id="exercise10" class="exercise-section" style="display:none;">
+            <h2>Conversiones de Números</h2>
+            <h3>Binario a Hexadecimal</h3>
+            <input type="text" id="binaryInput" placeholder="Ingrese número binario">
+            <button onclick="convertBinaryToHex()">Convertir a Hexadecimal</button>
+            <p id="binaryResult"></p>
+            
+            <h3>Hexadecimal a Binario</h3>
+            <input type="text" id="hexInput" placeholder="Ingrese número hexadecimal">
+            <button onclick="convertHexToBinary()">Convertir a Binario</button>
+            <p id="hexResult"></p>
+            
+            <button class="exit-btn" onclick="hideExercise('exercise10')">Salir</button>
+        </div>
+        <div id="exercise11" class="exercise-section" style="display:none;">
+            <h2>Análisis de Texto</h2>
+            <p>Ingrese un texto:</p>
+            <textarea id="textInput" placeholder="Escriba aquí..."></textarea>
+            <button onclick="analyzeText()">Analizar</button>
+            <p id="charCount"></p>
+            <p id="vowelCount"></p>
+            <p id="signCount"></p>
+            <p id="spaceCount"></p>
+            <p id="wordCount"></p>
+            <p id="digitCount"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise11')">Salir</button>
+        </div>
+        <div id="exercise12" class="exercise-section" style="display:none;">
+            <h2>Manejo de Arreglos</h2>
+            <p>Ingrese números separados por comas:</p>
+            <input type="text" id="arrayInput" placeholder="Ejemplo: 6,28,496,8128">
+            <button onclick="findPerfectNumbers()">Obtener Números Perfectos</button>
+            <p id="arrayResult"></p>
+            <button class="exit-btn" onclick="hideExercise('exercise12')">Salir</button>
+        </div>
+        
+        
+        
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
